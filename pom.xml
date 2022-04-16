@@ -21,8 +21,8 @@
         <maven.compiler.target>11</maven.compiler.target>
 
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.organization>mcucunuba</sonar.organization>
-        <sonar.projectKey>mcucunuba_integracion-continua</sonar.projectKey>
+        <sonar.organization>macs1407</sonar.organization>
+        <sonar.projectKey>macs1407_integracion-continua</sonar.projectKey>
     </properties>
 
     <build>
