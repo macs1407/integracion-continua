@@ -55,6 +55,6 @@ public class ResevicioRestriccionCali extends ServicioRestriccion{
 
     @Override
     public BigDecimal obtenerMulta() {
-        return new BigDecimal(4400000);
+        return new BigDecimal(454260);
     }
 }

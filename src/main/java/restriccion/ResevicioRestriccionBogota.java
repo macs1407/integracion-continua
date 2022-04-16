@@ -40,6 +40,6 @@ public class ResevicioRestriccionBogota extends ServicioRestriccion{
 
     @Override
     public BigDecimal obtenerMulta() {
-        return new BigDecimal(4700000);
+        return new BigDecimal(447700);
     }
 }
