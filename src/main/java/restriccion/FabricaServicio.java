@@ -11,13 +11,13 @@ public class FabricaServicio {
     public static ServicioRestriccion getServicio(String ciudad){
         ServicioRestriccion restriccion = null;
         switch (ciudad){
-            case "Medellin":
+            case "Medellín":
                 restriccion = new ResevicioRestriccionMedellin();
                 break;
             case "Cali":
                 restriccion = new ResevicioRestriccionCali();
                 break;
-            case "Bogota":
+            case "Bogotá":
                 restriccion = new ResevicioRestriccionBogota();
                 break;
             default:

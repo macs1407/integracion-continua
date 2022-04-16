@@ -14,24 +14,43 @@ public class ResevicioRestriccionCali extends ServicioRestriccion{
      */
     @Override
     public boolean puedeSalir(String placa, LocalDateTime fechaHora) {
-        boolean fechaMayorIgualSeisMenorIgualOnce = (fechaHora.getHour()>=6 && fechaHora.getHour() <= 11);
-        boolean fechaMayorIgualDieciSeisMenorIgualVeinte = (fechaHora.getHour()>=16 && fechaHora.getHour()<=20);
-        char ultimoDigitoPlaca = placa.charAt(placa.length()-1);
+        boolean estaEnHoraRestriccion = (fechaHora.getHour() >= 6 && fechaHora.getHour() <= 10)
+                || (fechaHora.getHour() >= 16 && fechaHora.getHour() <= 20);
 
-        switch (fechaHora.getDayOfWeek()){
+        char ultimoDigito = placa.charAt(placa.length() - 1);
+
+        switch (fechaHora.getDayOfWeek()) {
             case MONDAY:
-                if((ultimoDigitoPlaca == '1' || ultimoDigitoPlaca == '2')
-                        && (fechaMayorIgualSeisMenorIgualOnce || fechaMayorIgualDieciSeisMenorIgualVeinte)){
+                if ((ultimoDigito == '1' || ultimoDigito == '2') && estaEnHoraRestriccion) {
+                    return false;
+                }
+                break;
+            case TUESDAY:
+                if ((ultimoDigito == '3' || ultimoDigito == '4') && estaEnHoraRestriccion)
+                {
+                    return false;
+                }
+                break;
+            case WEDNESDAY:
+                if ((ultimoDigito == '5' || ultimoDigito == '6') && estaEnHoraRestriccion)
+                {
+                    return false;
+                }
+                break;
+            case THURSDAY:
+                if ((ultimoDigito == '7' || ultimoDigito == '8') && estaEnHoraRestriccion)
+                {
                     return false;
                 }
                 break;
             case FRIDAY:
-                if((ultimoDigitoPlaca == '1' || ultimoDigitoPlaca == '2')
-                        && (fechaMayorIgualSeisMenorIgualOnce || fechaMayorIgualDieciSeisMenorIgualVeinte)) {
+                if ((ultimoDigito == '9' || ultimoDigito == '0') && estaEnHoraRestriccion)
+                {
                     return false;
                 }
                 break;
         }
+
         return true;
     }
 
