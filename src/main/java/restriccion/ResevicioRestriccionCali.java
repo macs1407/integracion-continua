@@ -50,7 +50,6 @@ public class ResevicioRestriccionCali extends ServicioRestriccion{
                 }
                 break;
         }
-
         return true;
     }
 
