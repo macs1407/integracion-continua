@@ -3,7 +3,7 @@ package restriccion;
 public class FabricaServicio {
 
     /**
-     * Metodo que se encarga de retorna el objeto de acuerdo al tipo, para quitar
+     * Metodo que se encarga de retorna el objeto de acuerdo al tipo, para quitar.
      * SMELL: condicional repetido
      * @param ciudad
      * @return
